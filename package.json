@@ -1,0 +1,29 @@
+{
+  "name": "ai-playwright-e2e-sample",
+  "version": "0.1.0",
+  "description": "Sample repository for the Zenn book \"AIエージェント×Playwright E2E実践\"",
+  "scripts": {
+    "test": "playwright test",
+    "test:generated": "playwright test tests/generated",
+    "test:experiments": "RUN_EXPERIMENTS=1 playwright test tests/experiments",
+    "generate": "tsx scripts/mcp-generate.ts specs/todo-basic.plan.json",
+    "review:generated": "tsx scripts/review-generated.ts specs/todo-basic.plan.json",
+    "review:fix": "tsx scripts/review-generated.ts specs/todo-basic.plan.json --fix",
+    "mcp:tools": "tsx scripts/mcp-list-tools.ts",
+    "mcp:test-run": "tsx scripts/mcp-run-tests.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "qingshanfeihu",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.10",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}

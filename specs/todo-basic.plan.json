@@ -1,0 +1,24 @@
+{
+  "suite": "TodoMVC basic (MCP generated)",
+  "seedFile": "tests/seed.spec.ts",
+  "scenarios": [
+    {
+      "name": "add two todos",
+      "file": "tests/generated/add-two-todos.spec.ts",
+      "steps": [
+        { "intent": "新しいTODO「牛乳を買う」を入力してEnter", "action": "type", "role": "textbox", "name": "What needs to be done?", "text": "牛乳を買う" },
+        { "intent": "新しいTODO「請求書を送る」を入力してEnter", "action": "type", "role": "textbox", "name": "What needs to be done?", "text": "請求書を送る" },
+        { "intent": "残り件数が 2 items left と表示される", "action": "verifyText", "text": "2 items left" }
+      ]
+    },
+    {
+      "name": "complete a todo",
+      "file": "tests/generated/complete-a-todo.spec.ts",
+      "steps": [
+        { "intent": "TODO「レビュー依頼」を追加", "action": "type", "role": "textbox", "name": "What needs to be done?", "text": "レビュー依頼" },
+        { "intent": "「レビュー依頼」のチェックボックスをONにする", "action": "click", "role": "checkbox", "name": "Toggle Todo" },
+        { "intent": "残り件数が 0 items left になる", "action": "verifyText", "text": "0 items left" }
+      ]
+    }
+  ]
+}
