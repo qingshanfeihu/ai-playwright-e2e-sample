@@ -55,3 +55,7 @@ docs/experiment-log.md         Real results: flaky-wait rates, mutation test, lo
 
 ## License
 MIT — see `LICENSE`.
+
+## GitHub Actions
+
+ワークフロー定義は `ci/playwright.yml` にあります。使うときは `.github/workflows/playwright.yml` にコピーしてください（本書 第9章参照）。
